@@ -1,0 +1,1252 @@
+:root {
+    --coral: #FB6F61;
+    --darkGreen: #34462D ;
+    --lightGreen: #8BA292 ;
+    --white: #F5F5F5;
+
+  }
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+  }
+
+  .body-container-wrapper {
+    height: 100vh;
+    display: grid;
+    width: 100%;
+    background-color: var(--white);
+    grid-template-areas:
+     'header'
+     'main'
+     'foot';
+    grid-template-rows: repeat(3, 1fr);
+    
+    
+}
+
+/* HEADER */
+.header_list{
+
+   grid-area: header;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: none;
+  
+    height: 50px;
+    
+    display: grid;
+    grid-template-areas:
+    "nachalo logo recepti";
+    grid-template-rows: 50px;
+    grid-template-columns: repeat(3, auto) ;
+}
+ .header_list{
+    list-style-type: none;
+    margin-top: 1.5em;
+    padding: 0;
+    
+}
+.nav_links{
+    display: flex;  
+}
+.nav_links:hover{
+    display: flex;
+    text-decoration: underline;
+    transition: 0.1s;
+}
+.link{
+    text-decoration: none;
+    color: #34462D;
+    
+}
+.linkA{
+    text-decoration: none;
+    color: var(--white);
+    
+}
+.linkA:hover{
+    text-decoration: underline;
+    color: var(--white);
+    transition: 0.1s;
+}
+
+ #back_link{
+    grid-column: 1;  
+    width: 1.5em;
+
+    
+}
+
+ #nachalo_nav{
+    grid-column: 2;
+    font-family: "PT+Sans+Caption", sans-serif;
+   
+}
+
+.logo_nav{
+    grid-column: 3;
+    width: 108px;
+    
+}
+#recepti_nav{
+    grid-column: 4;
+    font-family: "PT+Sans+Caption", sans-serif;
+   
+}
+
+/*BODY*/
+
+
+main{
+    grid-area: main;}
+    
+/* -- MAIN 1 -- */
+#mainHome{
+display: grid;
+grid-template-areas: 
+'partOne'
+'recepies'
+'about';
+grid-template-rows: 1fr 0.4fr 0.6fr;
+grid-template-columns: 1fr;
+}
+.partOne{
+    grid-area: partOne;
+}
+.selected_recepies{
+    grid-area: recepies;
+}
+.about_nadya{
+    grid-area: about;
+}
+.first_part_cub{
+    background-image: url("bacgroundHome.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.text{
+    text-align: center;
+    color: var(--darkGreen);
+}
+.mainTitle{
+    padding-top: 3em;
+    color: var(--coral);
+    font-size: 45px;
+    font-family: 'Russo One';
+}
+h4{
+    padding-top: 1em;
+    font-family: 'PT Sans Caption';
+    font-size: 20px;
+}
+.handWrittenTitle{
+    
+    font-family: 'Comforter';
+    font-size: 65px;
+}
+.socials_row{
+ display: grid;
+ grid-template-columns: repeat(4, 1fr) 1.1fr;
+ grid-template-areas: 'logo insta nameIg fb nameFB';
+ height: 50pxt;
+ width: 56%;
+ list-style-type: none;
+ font-family: 'PT Sans Caption';
+ font-size: 15px;
+ margin-bottom: 5em;
+ margin-top: 17em;
+ align-content:center;
+ padding-left: 2.7em;
+ padding-bottom: 2em;
+ 
+ color: var(--white);
+}
+.one{
+    grid-area: logo;
+  
+    margin-left: 2em;
+    margin-top: -0.6em;
+    display: block;
+}
+.two{
+    grid-area: insta;   
+}
+.three{
+    grid-area: nameIg;
+    margin-top: 3em;
+}
+.three:hover{
+    grid-area: nameIg;
+    margin-top: 3em;
+    text-decoration: underline;
+    transition: 0.3s;
+}
+.for{
+    grid-area: fb;
+}
+.five{
+    grid-area: nameFB;
+    margin-top: 3em;  
+}
+.five:hover{
+    grid-area: nameFB;
+    margin-top: 3em;  
+    text-decoration: underline;
+    transition: 0.3s;
+}
+.icon{
+    margin-top:0.5em;
+}
+.body-container-wrapper > main{
+    grid-area: main;
+}
+.body-container-wrapper > footer{
+    grid-area: footer;
+}
+/* recepta line */
+.line_one{
+display: block;
+ width: 100%;
+ height: 2em;
+ background-color: var(--coral);
+ margin-top: 10em;
+ margin-bottom: 8em;
+ color: var(--white);
+ text-align:center;
+}
+.line_des_text{
+    padding-top: 7px;
+    font-family: 'PT Sans Caption';
+    font-size: 15px;
+
+}
+
+/* -- ПОДБРАНИ РЕЦЕПТИ  (incudes parts from main 1 & 2) -- */
+
+.selected_recepies{
+    grid-area:recepies;
+    display: grid;
+    grid-template-areas: 
+    'title '
+    'img '
+    'button';
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 0.5fr 0.01fr;;
+    row-gap: 1em;
+    height: 100%;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.titleHandwriten{
+  font-family: 'Comforter';
+  font-size: 2em;  
+  color: var(--darkGreen);
+  grid-area: title;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2em; 
+}
+
+.titleSelectedRec{
+    grid-area: title;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.selectRecepiesList{
+    list-style-type: none;
+    margin-top: 1.5em;
+    padding: 0;  
+}
+ul.selectRecepiesList li{
+    display:inline-block;  
+    height: auto;  
+    margin-left: 15px;
+}
+.picturesGallery{
+display: block;
+margin:auto;
+margin-top: -2em;
+}
+
+.imgMain{
+    height: 14em;
+    
+}
+.picturesGalleryMain{
+    grid-area: img;
+    margin: auto; 
+}
+   .selectRecepiesList{
+    display: grid;
+    grid-template-areas:
+     'i1 i2 i3'
+     'i4 i5 i6';
+     grid-template-columns: 1fr 1fr 1fr;
+     grid-template-rows: repeat(2, 1fr);
+     row-gap: 5px;
+     column-gap: 5px;
+     margin: auto;
+}
+.i1{
+    grid-area: i1;
+}
+.i2{
+    grid-area: i2;
+}
+.i3{
+    grid-area: i3;
+}  
+.i4{
+    grid-area: i4;
+}
+.i5{
+    grid-area: i5;
+}
+.i6{
+    grid-area: i6;
+} 
+
+
+
+/* label of the photos */
+.l{
+    text-decoration: none;
+    color: var(--white); 
+    font-family: 'Russo One';
+    position:inherit;
+    top:33%;
+    bottom:auto;
+    left: 0.5em;
+   
+}
+
+.l:hover{
+    text-decoration:none;
+    color: var(--darkGreen); 
+    font-family: 'Russo One';
+    position:inherit;
+    top:33%;
+    bottom:auto;
+    left: 0.5em;
+    transition: 0.3s;
+}
+
+.mini_recp_title{
+    background-color: rgba(139, 162, 146, 75%);
+    height: 4.3em;
+    margin-top: -4.55em;
+    position:relative;
+    z-index: 0;
+    
+}
+
+
+/* button */
+.buttonSeeAllMainRecepies{
+    grid-area: button;
+    display: block;
+   margin: auto;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    
+}
+.button{
+    height: 4em;
+    width: 14em ;
+    border-radius: 50em;
+    border-color: var(--lightGreen);
+    border-width: thick;
+    color: var(--lightGreen);
+    background-color: var(--white); 
+}
+.button_link{
+    text-decoration: none;
+    color: var(--lightGreen);
+    font-weight: bold;
+}
+.buttonSeeAllMainRecepies :hover{
+    height: 4em;
+    width: 14em ;
+    border-radius: 50em;
+    border: none;
+    color: var(--white);
+    background-color: var(--lightGreen); 
+    transition: 0.3s;
+    
+}
+
+/* ABOUT NADYA */
+.about_nadya{
+    background-color:  rgba(139, 162, 146, 15%);
+    padding-top: 3em;
+    margin-top: 8em;
+    height: 80em;
+}
+.titleAboutMe{
+    display: block;
+    text-align: center;
+}
+.textAbout{
+    text-align: left;
+    font-family: 'PT Serif Caption';
+    font-size: 15px;
+    
+}
+.contentBlockAbout{
+    display: flex;
+    margin-left: 14em;
+    margin-right: 14em;
+   
+}
+
+#aboutPicture{
+ height: 20em;
+    border-radius: 100%;
+    padding: 1.5em;
+   margin-top: -4em;
+}   
+.about-bacground{
+    background-color: var(--lightGreen);
+}
+#titleVideo{
+    text-align: left;
+    padding: 6em;
+    padding-bottom: 1.5em;
+}
+
+#yt_clip{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* MAIN 2 */
+#main2{
+    margin-top: 8em;
+    margin-bottom: 8em;
+    background-color: var(--white);
+    display: grid;
+    grid-template-areas: 
+    'title'
+    'soleni'
+    'sladki';
+    grid-template-rows: 0.1fr 1fr 1fr;
+}
+.title_recepiec_secondary{
+    grid-area: title;
+    text-align: center;
+    font-family: 'Russo One';
+    font-size: 40px;
+    color: var(--coral);
+}
+.soleni_recepti{
+    grid-area: soleni;
+}
+.sladki_recepti{
+    grid-area: sladki;
+}
+.coralTitle{
+    color: var(--coral);
+    margin-top: 0.6em;
+}
+hr{
+    width: 65px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    color: rgba(139, 162, 146, 60%);
+}
+
+.titleMain2{
+    font-size: 128px;
+    margin-bottom: 0.3em;
+}
+
+/*  MAIN 3 SALT REC TEMPL */
+#solenaReceptaMain{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.1fr 0.1fr 0.5fr 0.5fr 1fr 0.3fr 1fr;
+  grid-template-areas: 
+  'titleSmall'
+  'titleBig'
+  'picture'
+  'intro'
+  'ingredients'
+  'comment'
+  'prigotvqne';
+  margin-left: 3em;
+  margin-right: 3em;
+  margin-top: 4em;
+  margin-left: 1vh;
+  row-gap: 2em;
+}
+
+.typeDishName{
+    grid-area: titleSmall;
+    text-align:left;
+    font-family: 'Comforter';
+    font-size: 24px;
+    color: var(--lightGreen);
+    margin-left: 3em;
+    margin-bottom: 0;
+}
+.recepie_title{
+    grid-area: titleBig;
+    text-align:center;
+    font-family: 'Russo One';
+    font-size: 40px;
+    color: var(--darkGreen);
+    margin: 1em;
+}
+.img_recepie_itsPage{
+    grid-area: picture;
+    height: 19em;
+    margin-left: auto;
+    margin-right: auto;
+}
+#p1Intro{
+    grid-area: intro;
+
+}
+.ingredients{
+    grid-area: ingredients;
+    display: block;
+    background-color: var(--lightGreen);
+    color: var(--white);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 4%;
+    font-family:'PT Serif';
+    font-size: 16px;
+    list-style-type: "-";
+    width: 30%;
+}
+.listIngr{
+    list-style-type: "-";
+}
+
+.titleList{
+    font-family:'PT Serif';
+    font-size: 18px;
+}
+.headerList{
+    font-family: 'Comforter';
+    font-size: 36px;
+    text-align: center;
+}
+.titleLeft{
+    text-align: left;
+    margin-left: 4.4em;
+}
+#p2comments{
+    grid-area: comment;
+}
+.p3prigotvqne{
+    grid-area: prigotvqne;
+}
+
+.recPageParagraph{
+    margin-top: 2em;
+    margin-left: 7em;
+    margin-right: 7em;
+    margin-bottom: 3em;
+    color: var(--darkGreen);
+    text-align: left;
+    font-family: 'PT Serif';
+    font-size: 16px;
+
+}
+
+/* SWEET REC TEMPL */
+.sladkiTitle{
+    color: var(--coral);
+}
+.sladkiFon{
+    background-color: rgba(251, 111, 97, 60%);
+}
+
+/* footer */
+.body-container-wrapper > footer{
+    grid-area: foot;
+    background-color: var(--coral);
+    color: var(--white);
+}
+/* footer FORM */
+
+.titleCoockTogether{
+    color: var(--white);
+    font-size: 96px;
+    text-align: center;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    
+}
+.foot_block1{
+    text-align: center;
+    color: var(--white);
+    font-family: 'PT Sans Caption';
+    font-size: 22px;
+    margin: auto;
+}
+
+.textForm{
+    margin: 14px;
+}
+
+input{
+    width: 15%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 4em;
+    color: var(--darkGreen);
+    border: none;
+    margin: 1.3em;
+
+  }
+
+  input[type=date]{
+    margin-top: 2.5em;
+  }
+
+  input[type=submit]{
+    text-align: center;
+    color: var(--white);
+    background-color: #8BA292;
+    font-weight: bold;
+  }
+
+  input[type=submit]:hover{
+    text-align: center;
+    font-weight: bold;
+    color: var(--darkGreen);
+    background-color: var(--white);
+    transition: 1s;
+    cursor: pointer;
+
+  }
+
+  
+  
+  /* Style the container for inputs */
+  .container {
+    background-color:var(--lightGreen);
+    padding: 20px;
+   
+  }
+  
+  /* The message box is shown when the user clicks on the password field */
+  #message {
+    display:none;
+    background:var(--lightGreen);
+    color:var(--white);
+    position: relative;
+    padding: 20px;
+    margin-top: 5px;
+     margin-bottom: 25px;
+  }
+  
+  #message p {
+    padding: 10px 35px;
+    font-size: 18px;
+  }
+  
+  /* Add a green text color and a checkmark when the requirements are right */
+  .valid {
+    color: var(--darkGreen);
+  }
+  
+  .valid:before {
+    position: relative;
+    left: -35px;
+    content: "✔";
+  }
+  
+  /* Add a red text color and an "x" when the requirements are wrong */
+  .invalid {
+    color: var(--white);
+  }
+  
+  .invalid:before {
+    position: relative;
+    left: -35px;
+    content: "✖";
+  }
+  
+
+
+/* FOOTER SOCIALS */
+
+.socials_row_foot{
+    display: grid;
+    list-style-type: none;
+    grid-template-areas: 
+    'igLogo igName logo fbLogo fbName';
+    grid-template-columns: 0.5fr 0.5fr 1fr 0.5fr 0.5fr;
+    grid-template-rows: 1fr;
+    width: 60%;
+   margin: auto;
+    margin-top: 3em;
+}
+
+.logo{
+    grid-area: logo;
+    padding: 4.5em;
+}
+
+.igLogo{
+    grid-area: igLogo;
+    width: 6em;
+}
+
+.fbLogo{
+    grid-area: fbLogo;
+    width: 6em;
+}
+
+.elFoot{
+    margin: auto;
+    font-family: 'PT Sans Caption';
+    font-size: 15px;
+}
+
+
+
+/* RESPONSIVE MEDIA QUERIES */
+
+/* @media (min-width: 768px) and (max-width: 1023px) {
+    
+  }
+
+@media (min-width: 480px) and (max-width: 767px) {
+    
+  }
+
+@media (max-width: 479px) {
+   
+  } */
+
+/* HOME PAGE */
+
+/* scr size 2 */
+@media (min-width: 768px) and (max-width: 1209px) {
+    #mainHome{
+        grid-template-rows: 0.5fr 0.4fr 0.6fr;
+        }
+.socials_row{
+ margin-left: 1%;
+ margin-right: auto;
+ width: 80%;
+}
+.mainTitle{
+    font-size: 35px;
+}
+h4{
+    font-size: 18px;  
+}
+.handWrittenTitle{
+    font-size: 55px;
+}
+.line_one{
+    margin-top: 7em;
+    margin-bottom: 7em;
+}     
+.imgMain{
+    height:10em;  
+}
+
+.mini_recp_title{
+    font-size: 0.8em;    
+}
+.button{
+    height: 3em;
+    width: 10em ;
+
+}
+#aboutPicture{
+    height: 10em;
+    border-radius: 100%;
+    padding: 1.5em;
+   margin-top: -4em;
+}  
+.textAbout{
+    font-size: 11px;
+}
+.contentBlockAbout{
+    margin-left: 2em;
+    margin-right: 2em;
+}
+#aboutPicture{
+    height: 15em;
+       border-radius: 100%;
+       padding: 1.3em;
+      margin-top: -4em;
+   } 
+.socials_row_foot{
+    width: 100%;
+   }
+.elFoot{
+     font-size: 13px;
+}
+.titleMain2{
+    font-size: 80px;
+}
+}
+/* scr size 3 */
+
+@media (min-width: 480px) and (max-width: 767px) {
+    #mainHome{
+        grid-template-rows: 0.3fr 0.4fr 0.4fr;
+        }
+
+    .socials_row{
+        margin-left: 1%;
+        margin-right: auto;
+        width: 100%;
+    }
+       .mainTitle{
+        font-size: 25px;
+    }
+    h4{
+        font-size: 12px;  
+    }
+    .handWrittenTitle{
+        font-size: 40px;
+    }
+    .socials_row{
+        font-size: 12px;
+        grid-template-areas: 
+        'logo insta nameIg '
+        'logo fb nameFB';
+        grid-template-rows: auto auto;
+        grid-template-columns: repeat(3, 1fr) ;
+        width: 70%;
+        padding: 0;
+        padding-bottom: 1em;
+    }
+    .icon{
+        margin-top:0.5em;
+        height: 4em;
+    }
+    
+    .one{
+       padding: 1em; 
+    }
+    .line_des_text{
+        font-size: 12px;
+    }
+    
+
+    .p{
+        width: 95%; 
+        margin: 1em; 
+    }
+    .titleSelectedRec{
+        margin:0;
+        font-size: 28px;
+        padding-bottom: 1em;
+        text-align: center;
+    }
+    .imgMain{
+        height:17em;  
+    }
+    .selectRecepiesList{
+        display: grid;
+        grid-template-areas:
+         'i1' 
+         'i2'
+         'i3'
+         'i4'
+         'i5'
+         'i6';
+         grid-template-columns: 1fr ;
+         grid-template-rows: repeat(6, 1fr);
+    }
+
+  .contentBlockAbout{
+    display: grid;
+    width: 100%;
+    grid-template-areas: 
+    'picture'
+    'textA';
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin: 0;
+    padding: 1em;
+  }
+  .titleAboutMe{
+    margin-bottom: 1em;
+  }
+ 
+  .textAbout{
+    grid-area: textA;
+    font-size: 13px;
+    margin: 0;
+    margin-top: -2em;
+  }
+    
+
+  .aboutPictureSmall{
+    grid-area: picture;
+    display: flexbox;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #aboutPicture{
+    height: 16em;
+    margin-left: auto;
+    margin-right: auto;
+   }  
+
+  
+
+/* footer */
+.titleCoockTogether{
+    font-size: 60px;
+}
+.formPartOneSmall{
+    display: grid;
+    grid-template-areas: 
+    'name'
+    'email'
+    'password'
+    'btn';
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4,0.5fr);
+    row-gap: 0;
+}
+.nameForm{
+    grid-area: name;
+    margin-left: auto;
+    margin-right: auto; 
+}
+.emailForm{
+    grid-area: email;
+    margin-left: auto;
+    margin-right: auto; 
+}
+.passwordForm{
+    grid-area: password;
+    margin-left: auto;
+    margin-right: auto; 
+}
+.submitForm{
+    grid-area: btn;
+    margin-left: auto;
+    margin-right: auto; 
+}
+.textForm{
+    margin: 0;
+    font-size: 15px;
+}
+label{
+    width: 50%;
+    padding: 1.5em;
+    text-align: center;
+}
+
+.socials_row_foot{
+    width: 100%;
+    grid-template-columns: repeat(5,1fr);
+    
+}
+.logo{
+    grid-area: logo;
+    padding: 1.6em;
+    margin: 0;
+    width: 9em;
+}
+
+.igLogo{
+    grid-area: igLogo;
+    width: 9em;
+    margin: 0;
+}  
+
+.fbLogo{
+    grid-area: fbLogo;
+    width: 9em;
+    margin: 0;
+}
+
+.elFoot{
+    margin: auto;
+    font-family: 'PT Sans Caption';
+    font-size: 10px;
+    padding: 0;
+}
+input{
+    width: 50%;
+    padding: 6px 10px;
+    margin: 0.8em;
+}
+}
+/* scr size 4 */
+@media (max-width: 479px) {
+    
+    
+    .mainTitle{
+        font-size: 20px;
+        padding-top: 5em;
+    }
+    h4{
+        font-size: 12px;  
+    }
+    .handWrittenTitle{
+        font-size: 35px;
+        display: block;
+        width: 60%;
+       margin-left: auto;
+       margin-right: auto;
+       text-align: center;
+    } 
+    .nav_links{
+        visibility: hidden;;  
+    }
+    .socials_row{
+        margin-left: 1%;
+        margin-right: auto;
+        font-size: 10px;
+        grid-template-areas: 
+        'logo insta nameIg '
+        'logo fb nameFB';
+        grid-template-rows: auto auto;
+        grid-template-columns: repeat(3, 1fr) ;
+        width: 60%;
+        padding: 0;
+        padding-bottom: 1em;
+    }
+    .icon{
+        margin-top:0.5em;
+        height: 3em;
+    }
+    
+    .one{
+       padding: 1em; 
+       width: 10em;
+    }
+    #mainHome{
+    grid-template-rows: 0.4fr 0.3fr 0.6fr;
+    }
+    .titleSelectedRec{
+        margin:0;
+        font-size: 28px;
+        padding-bottom: 1em;
+        text-align: center;
+    }
+    .imgMain{
+        
+    }
+    .selectRecepiesList{
+        display: grid;
+        grid-template-areas:
+         'i1' 
+         'i2'
+         'i3'
+         'i4'
+         'i5'
+         'i6';
+         grid-template-columns: 1fr ;
+         grid-template-rows: repeat(6, 1fr);
+    }
+
+  .contentBlockAbout{
+    display: grid;
+    width: 100%;
+    grid-template-areas: 
+    'picture'
+    'textA';
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin: 0;
+    padding: 0em;
+  }
+  .titleAboutMe{
+    margin-bottom: 2em;
+    font-size: 35px;
+  }
+ 
+  .textAbout{
+    grid-area: textA;
+    font-size: 12px;
+    margin: 0;
+    width: 80%;
+    margin-left: 2em;
+  }
+    
+
+  .aboutPictureSmall{
+    grid-area: picture;
+    display: flexbox;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #aboutPicture{
+    height: 16em;
+    margin-left: auto;
+    margin-right: auto;
+   } 
+    
+
+   .line_one{
+    display: block;
+     width: 100%;
+     height: 8em;
+     background-color: var(--coral);
+     margin-top: 2em;
+     margin-bottom: 0;
+     color: var(--white);
+     text-align:center;
+    }
+    .line_des_text{
+        padding-top: 15%;
+        font-family: 'PT Sans Caption';
+        font-size: 15px;
+    
+    }
+    
+     /* footer */
+     .titleCoockTogether{
+        font-size: 60px;
+    }
+    .formPartOneSmall{
+        display: grid;
+        grid-template-areas: 
+        'name'
+        'email'
+        'password'
+        'btn';
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4,0.5fr);
+        row-gap: 0;
+    }
+    .nameForm{
+        grid-area: name;
+        margin-left: auto;
+        margin-right: auto; 
+    }
+    .emailForm{
+        grid-area: email;
+        margin-left: auto;
+        margin-right: auto; 
+    }
+    .passwordForm{
+        grid-area: password;
+        margin-left: auto;
+        margin-right: auto; 
+    }
+    .submitForm{
+        grid-area: btn;
+        margin-left: auto;
+        margin-right: auto; 
+    }
+    .textForm{
+        margin: 0;
+        font-size: 15px;
+    }
+    label{
+        width: 50%;
+        padding: 1.5em;
+        text-align: center;
+    }
+    
+    .socials_row_foot{
+    grid-template-areas: 
+    'logo igLogo igName '
+    'logo fbLogo fbName';
+    grid-template-columns: 0.6fr 0.3fr 0.3fr;
+    grid-template-rows: 1fr 1fr;
+    width: 100%;
+    margin: 0.2em;
+    margin-top: 3em;
+    margin-right: 0.5em;
+    }
+    .logo{
+        grid-area: logo;
+        padding: 1.6em;
+        margin: 0;
+        width: 8em;
+    }
+    
+    .igLogo{
+        grid-area: igLogo;
+        width: 7em;
+        margin: 0;
+    }  
+    
+    .fbLogo{
+        grid-area: fbLogo;
+        width: 7em;
+        margin: 0;
+    }
+    
+    .elFoot{
+        margin: auto;
+        font-family: 'PT Sans Caption';
+        font-size: 10px;
+        padding: 0;
+    }
+    input{
+        width: 50%;
+        padding: 6px 10px;
+        margin: 0.8em;
+    }
+}
+/* RECEPIES GALLERY */
+
+@media (min-width: 480px) and (max-width: 767px) {
+    
+}
+
+@media (max-width: 479px) {
+    .titleMain2{
+        font-size: 40px;
+    }
+} 
+
+/* RECEPIES TEMPLATE PAGE */
+@media (min-width: 768px) and (max-width: 1023px) {
+   .ingredients{
+    width: 45%;
+   } 
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+.ingredients{
+    width: 60%;
+}
+}
+
+@media (max-width: 479px) {
+    #solenaReceptaMain{
+        grid-template-rows: 1em 0.1fr 0.2fr 0.2fr 0.5fr 0.3fr 0.5;
+        margin-left:0.4em;
+        margin-right: 0.4em;
+    }
+    .titleLeft{
+        text-align: left;
+        margin-left: 1em;
+    }
+    .ingredients{
+        width:90%;
+    }
+    .recPageParagraph{
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+    .img_recepie_itsPage{
+        grid-area: picture;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+} 
